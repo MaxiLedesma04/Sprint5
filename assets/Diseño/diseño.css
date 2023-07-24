@@ -1,6 +1,16 @@
-.imagen-fondo{
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-image: url(../imgenes/optional_banner_4.jpg);
     background-position: center;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .iconoA{
     width: 13vw;
