@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events</title>
+    <link rel="shortcut icon" href="../imgenes/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Diseño/diseño.css">
+</head>
+<body class="imagen-fondo">
+    <div id="app" class="page">
+        <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
+            <img class="iconoA" src="../imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
+            <div>
+                <a class="navegadores" href="../../index.html">Home</a>
+                <a class="navegadores" href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
+                <a class="navegadores" href="#">Past Events</a>
+                <a class="navegadores" href="../contact/contact.html">Contact Us</a>
+                <a class="navegadores" href="../stats/stats.html">Stats</a>
+            </div>
+        </nav>
+        <div class="carousel-imagenes position-relative">
+            <h2 class="position-absolute top-50 start-50 translate-middle z3">PAST-EVENTS</h2>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../imgenes/optional_banner_5.jpg" class="d-block w-100 object-fit-cover" alt="banner-5">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../imgenes/optional_banner_1.jpg" class="d-block w-100 object-fit-cover" alt="banner-1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../imgenes/optional_banner_2.jpg" class="d-block w-100 object-fit-cover" alt="banner-2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <main>
+            <section class="d-flex gap-5 justify-content-center align-items-center">
+                <template v-for="categoria of categorias">
+                    <div class="form-check form-check-inline">
+                        <input
+                            class="border-check form-check-input"
+                            type="checkbox"
+                            v-bind:id="categoria"
+                            v-bind:value="categoria"
+                            v-on:change="fnFiltrado"
+                            v-model="valorCheked"
+                        />
+                        <label class="form-check-label" v-bind:for="categoria"
+                            >{{categoria}}</label
+                        >
+                    </div>
+                </template>
+                <section>
+                    <input id="" class="form-control" type="search" placeholder="Search"
+                    aria-label="Search" v-on:input="fnFiltrado" v-model="valorSearch"/>
+                </section>
+            </section>
+            <section class="d-flex gap-5 flex-wrap row justify-content-center align-items-center h-100">
+            <template v-for="event in filtrado">
+    
+                    <article class="card col-10 col-md-5 mt-5 col-xl-3">
+                        <img
+                            v-bind:src="event.image"
+                            class="card-img-top card-h p-2"
+                            alt=""
+                        />
+                        <section class="card-body card text-center">
+                            <h5>{{event.name}}</h5>
+                            <p class="card-text"> {{event.description}} </p>
+                        <div
+                            class="align-items-center d-flex w-100 justify-content-between"
+                            >
+                            <p class="fw-medium d-flex align-items-center m-0">
+                                Price: <span class="parrafo-card">$ {{event.price}}</span>
+                            </p>
+                            <a v-bind:href="'../details/details.html?id='+ event._id" class="btn btn-primary">Details</a>
+                            </div>
+                        </section>
+                    </article>
+    
+            </template>    
+    
+            </section>
+        </main>
+        <footer class="d-flex justify-content-between mt-2" id="piefinal">
+            <div class="imagen-pie">
+                <img src="../imgenes/facebook.png" alt="Facebook">
+                <img src="../imgenes/instagram.png" alt="Instagram">
+                <img src="../imgenes/whatsapp.png" alt="whatsapp">
+            </div>
+            <h6 class="fs-6">Cohort 49</h6>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../scripts/past.js"></script>
+
+</body>
+</html>

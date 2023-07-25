@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="../imgenes/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Diseño/diseño.css">
+</head>
+<body class="imagen-fondo">
+    <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
+        <img class="iconoA" src="../imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
+        <div>
+            <a class="navegadores" href="../../index.html">Home</a>
+            <a class="navegadores" href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
+            <a class="navegadores" href="../past-events/past-events.html">Past Events</a>
+            <a class="navegadores" href="#">Contact Us</a>
+            <a class="navegadores" href="../stats/stats.html">Stats</a>          
+        </div>
+    </nav>
+
+    <main id="app">
+        <template v-if="variableQ">
+            <article class="card col-10 col-md-5 mt-5 col-xl-3">
+                <img
+                    v-bind:src="variableQ.image"
+                    class="card-img-top card-h p-2"
+                    alt=""
+                />
+                <section class="card-body card text-center">
+                    <h5>{{variableQ.name}}</h5>
+                    <p class="card-text"> {{variableQ.description}} </p>
+                <div
+                    class="align-items-center d-flex w-100 justify-content-between"
+                    >
+                    <p class="fw-medium d-flex align-items-center m-0">
+                        Price: <span class="parrafo-card">$ {{variableQ.price}}</span>
+                    </p>
+                    </div>
+                </section>
+            </article>
+        </template>
+    </main>
+    <footer class="d-flex justify-content-between mt-2" id="piefinal">
+        <div class="imagen-pie">
+            <img src="../imgenes/facebook.png" alt="Facebook">
+            <img src="../imgenes/instagram.png" alt="Instagram">
+            <img src="../imgenes/whatsapp.png" alt="whatsapp">
+        </div>
+        <h6 class="fs-6">Cohort 49</h6>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../scripts/details.js"></script>
+</body>
+</html>
