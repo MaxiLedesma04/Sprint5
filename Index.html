@@ -11,23 +11,35 @@
 </head>
 <body>
         <div id="app" class="page">
-
-            <div class="otra-medida">
-                <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
-                    <img class="iconoA" src="./assets/imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
-                    <div>
-                        <a class="navegadores" href="#">Home</a>
-                        <a class="navegadores" href="./assets/upcoming-ev/upcoming-events.html">Upcuming Events</a>
-                        <a class="navegadores" href="./assets/past-events/past-events.html">Past Events</a>
-                        <a class="navegadores" href="./assets/contact/contact.html">Contact Us</a>
-                        <a class="navegadores" href="./assets/stats/stats.html">Stats</a>
+            <nav class="navbar navbar-expand-lg" id="navegadors">
+                <div class="container-fluid d-flex">
+                    <img src="./assets/imgenes/amazing_brand.png" alt="" class="iconoA">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex w-100 justify-content-around">
+                            <a class="nav-link active shadow rounded border border-black" aria-current="page"
+                                href="#">Home</a>
+                            <a class="nav-link shadow rounded border border-black"
+                                href="./assets/upcoming-ev/upcoming-events.html">Upcoming Events</a>
+                            <a class="nav-link shadow rounded border border-black" href="./assets/past-events/past-events.html">Past
+                                Events</a>
+                            <a class="nav-link shadow rounded border border-black"
+                                href="./assets/contact/contact.html">Contact</a>
+                            <a class="nav-link shadow rounded border border-black"
+                                href="./assets/stats/stats.html">Stats</a>
+                        </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav> 
+
             <main class="flex-grow-1">
                 <div class="carousel-imagenes position-relative">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                        <h2 class="position-absolute top-50 start-50 translate-middle">HOME</h2>
+                        <h2 class="position-absolute top-50 start-50 translate-middle z-1">HOME</h2>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
                             <img src="./assets/imgenes/optional_banner_5.jpg" class="d-block w-100 object-fit-cover" alt="banner-5">
@@ -48,8 +60,9 @@
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div>
+                      <h2 class="position-absolute top-50 start-50 translate-middle z-1">HOME</h2>
                 </div>
-                <section class="d-flex gap-5 justify-content-center align-items-center">
+                <section class="d-flex flex-wrap gap-5 justify-content-center align-items-center">
                     <template v-for="categoria of categorias">
                         <div class="form-check form-check-inline">
                             <input
@@ -70,7 +83,7 @@
                         aria-label="Search" v-on:input="fnFiltrado" v-model="valorSearch"/>
                     </section>
                 </section>
-                <section class="d-flex gap-5 flex-wrap row justify-content-center align-items-center h-100">
+                <section class="d-flex gap-5 flex-wrap justify-content-center align-items-center h-100 col-12">
                 <template v-for="event in filtrado">
 
                         <article class="card col-10 col-md-5 mt-5 col-xl-3">
@@ -117,3 +130,50 @@
 
 
 <!-- .html?idEvent=${event._id} -->
+
+
+
+<!-- 
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex">
+        <img src="./assets/images/amazing_brand.png" alt="" class="logoImage">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex w-100 justify-content-around">
+                <a class="nav-link active shadow rounded border border-black" aria-current="page"
+                    href="#">Home</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="./assets/pages/upcoming.html">Upcoming Events</a>
+                <a class="nav-link shadow rounded border border-black" href="./assets/pages/past.html">Past
+                    Events</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="./assets/pages/contact.html">Contact</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="./assets/pages/stats.html">Stats</a>
+            </div>
+        </div>
+    </div>
+</nav> -->
+
+
+
+
+
+
+
+<!-- <div class="otra-medida">
+    <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
+        <img class="iconoA" src="./assets/imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
+        <div>
+            <a class="navegadores" href="#">Home</a>
+            <a class="navegadores" href="./assets/upcoming-ev/upcoming-events.html">Upcuming Events</a>
+            <a class="navegadores" href="./assets/past-events/past-events.html">Past Events</a>
+            <a class="navegadores" href="./assets/contact/contact.html">Contact Us</a>
+            <a class="navegadores" href="./assets/stats/stats.html">Stats</a>
+        </div>
+    </nav>
+</div> -->

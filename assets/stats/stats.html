@@ -11,16 +11,32 @@
 </head>
 <body class="imagen-fondo">
     <div id="app">
-        <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
-            <img class="iconoA" src="../imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
-            <div>
-                <a class="navegadores" href="../../index.html">Home</a>
-                <a class="navegadores" href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
-                <a class="navegadores" href="../past-events/past-events.html">Past Events</a>
-                <a class="navegadores" href="#">Contact Us</a>
-                <a class="navegadores" href="../stats/stats.html">Stats</a>          
+
+        <nav class="navbar navbar-expand-lg" id="navegadors">
+            <div class="container-fluid d-flex">
+                <img src="../imgenes/amazing_brand.png" alt="" class="iconoA">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav d-flex w-100 justify-content-around">
+                        <a class="nav-link active shadow rounded border border-black" aria-current="page"
+                            href="../../index.html">Home</a>
+                        <a class="nav-link shadow rounded border border-black"
+                            href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
+                        <a class="nav-link shadow rounded border border-black" href="../past-events/past-events.html">Past
+                            Events</a>
+                        <a class="nav-link shadow rounded border border-black"
+                            href="../contact/contact.html">Contact</a>
+                        <a class="nav-link shadow rounded border border-black"
+                            href="#">Stats</a>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </nav> 
+
         <div class="carousel-imagenes">
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
@@ -45,26 +61,33 @@
               </div>
         </div>
         <main>
-            <table class="table table-dark table-striped">
-                <th colspan="3">Events Statics</th>
-                <tr>
-                    <td>Events with highest % of assistance</td>
-                    <td>Events with lowest % of assistance</td>
-                    <td>Events with larger capacity</td>
-                </tr>
-                <tr>
-                    <td>🔹{{mayorAssis.name}}🙍‍♂️ {{mayorPorcent}}%</td>
-                    <td>🔹{{menorAssis.name}} 🙍‍♂️{{menorPorcent}}%</td>
-                    <td>🔹{{eventMayor}} 🙍‍♂️{{eventNum}}</td>
-                </tr>
-                </table>
-                <table class="table table-dark table-striped">
-                    <th colspan="3">Upcoming Events statics by categories</th>
+            <table class="tabla table table-danger">
+                <tbody>
+                    <th colspan="3" class="text-center">
+                        Events Statics
+                    </th>
                     <tr>
-                        <td scope="col">Categories</td>
-                        <td scope="col">Revenue</td>
-                        <td scope="col">Estimate of Assistance</td>
+                        <td>Events with highest % of assistance</td>
+                        <td>Events with lowest % of assistance</td>
+                        <td>Events with larger capacity</td>
                     </tr>
+                    <tr>
+                        <td>🔹{{mayorAssis.name}}🙍‍♂️ {{mayorPorcent}}%</td>
+                        <td>🔹{{menorAssis.name}} 🙍‍♂️{{menorPorcent}}%</td>
+                        <td>🔹{{eventMayor}} 🙍‍♂️{{eventNum}}</td>
+                    </tr>
+                </tbody>
+
+
+                <tbody>
+                    <th colspan="3" class="text-center">
+                        Upcoming Events statics by categories
+                    </th>
+                        <tr>
+                            <td scope="col">Categories</td>
+                            <td scope="col">Revenue</td>
+                            <td scope="col">Estimate of Assistance</td>
+                        </tr>
                     <template v-for="categoria of objEventUp">
                         <tr>
                             <td scope="row">🔹{{categoria.category}}</td>
@@ -72,9 +95,12 @@
                             <td>🙍‍♂️{{categoria.porcEstimate}}%</td>
                         </tr>
                     </template>
-                </table>
-                <table class="table table-dark table-striped">
-                    <th colspan="3">Upcoming Events statics by categories</th>
+                </tbody>
+                            
+                <tbody>
+                    <th colspan="3" class="text-center">
+                        Upcoming Events statics by categories
+                    </th>
                     <tr>
                         <td scope="col">Categories</td>
                         <td scope="col">Revenue</td>
@@ -87,7 +113,9 @@
                             <td>🙍‍♂️{{categoria.porcAssistence}}%</td>
                         </tr>
                     </template>
+                </tbody>
                 </table>
+
         </main>
         <footer class="d-flex justify-content-between mt-2" id="piefinal">
             <div class="imagen-pie">

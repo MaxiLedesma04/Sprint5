@@ -10,16 +10,32 @@
     <link rel="stylesheet" href="../Diseño/diseño.css">
 </head>
 <body class="imagen-fondo">
-    <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
-        <img class="iconoA" src="../imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
-        <div>
-            <a class="navegadores" href="../../index.html">Home</a>
-            <a class="navegadores" href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
-            <a class="navegadores" href="../past-events/past-events.html">Past Events</a>
-            <a class="navegadores" href="#">Contact Us</a>
-            <a class="navegadores" href="../stats/stats.html">Stats</a>          
+
+  <nav class="navbar navbar-expand-lg" id="navegadors">
+    <div class="container-fluid d-flex">
+        <img src="../imgenes/amazing_brand.png" alt="" class="iconoA">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex w-100 justify-content-around">
+                <a class="nav-link active shadow rounded border border-black" aria-current="page"
+                    href="../../index.html">Home</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
+                <a class="nav-link shadow rounded border border-black" href="../past-events/past-events.html">Past
+                    Events</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="#">Contact</a>
+                <a class="nav-link shadow rounded border border-black"
+                    href="../stats/stats.html">Stats</a>
+            </div>
         </div>
-    </nav>
+    </div>
+</nav> 
+<div class="carousel-imagenes position-relative">
     <div class="carousel-imagenes">
         <div id="carouselExampleFade" class="carousel slide carousel-fade">
             <div class="carousel-inner">
@@ -41,8 +57,11 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+            <h2 class="position-absolute top-50 start-50 translate-middle z-1">Contact</h2>
           </div>
     </div>
+</div>
+
     <main>
             <form action="" class="d-flex flex-column align-items-center pt-4">
                 <div class="formu-contacto">

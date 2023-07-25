@@ -10,37 +10,55 @@
     <link rel="stylesheet" href="../Diseño/diseño.css">
 </head>
 <body class="imagen-fondo">
-    <nav class="d-flex p-2 justify-content-between flex-wrap" id="navegadors">
-        <img class="iconoA" src="../imgenes/amazing_brand.png" alt="Amazing_Brand_Logo">
-        <div>
-            <a class="navegadores" href="../../index.html">Home</a>
-            <a class="navegadores" href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
-            <a class="navegadores" href="../past-events/past-events.html">Past Events</a>
-            <a class="navegadores" href="#">Contact Us</a>
-            <a class="navegadores" href="../stats/stats.html">Stats</a>          
-        </div>
-    </nav>
 
-    <main id="app">
+    <nav class="navbar navbar-expand-lg" id="navegadors">
+        <div class="container-fluid d-flex">
+            <img src="../imgenes/amazing_brand.png" alt="" class="iconoA">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex w-100 justify-content-around">
+                    <a class="nav-link active shadow rounded border border-black" aria-current="page"
+                        href="../../index.html">Home</a>
+                    <a class="nav-link shadow rounded border border-black"
+                        href="../upcoming-ev/upcoming-events.html">Upcoming Events</a>
+                    <a class="nav-link shadow rounded border border-black" href="../past-events/past-events.html">Past
+                        Events</a>
+                    <a class="nav-link shadow rounded border border-black"
+                        href="../contact/contact.html">Contact</a>
+                    <a class="nav-link shadow rounded border border-black"
+                        href="../stats/stats.html">Stats</a>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+    <main id="app" class="flex-grow-1 ">
         <template v-if="variableQ">
-            <article class="card col-10 col-md-5 mt-5 col-xl-3">
-                <img
-                    v-bind:src="variableQ.image"
-                    class="card-img-top card-h p-2"
-                    alt=""
-                />
-                <section class="card-body card text-center">
-                    <h5>{{variableQ.name}}</h5>
-                    <p class="card-text"> {{variableQ.description}} </p>
-                <div
-                    class="align-items-center d-flex w-100 justify-content-between"
-                    >
-                    <p class="fw-medium d-flex align-items-center m-0">
-                        Price: <span class="parrafo-card">$ {{variableQ.price}}</span>
-                    </p>
-                    </div>
-                </section>
-            </article>
+            <div class="detalle">
+                <article class="card col-10 col-md-5 mt-5 col-xl-3">
+                    <img
+                        v-bind:src="variableQ.image"
+                        class="card-img-top card-h p-2"
+                        alt=""
+                    />
+                    <section class="card-body card text-center">
+                        <h5>{{variableQ.name}}</h5>
+                        <p class="card-text"> {{variableQ.description}} </p>
+                    <div
+                        class="align-items-center d-flex w-100 justify-content-between"
+                        >
+                        <p class="fw-medium d-flex align-items-center m-0">
+                            Price: <span class="parrafo-card">$ {{variableQ.price}}</span>
+                        </p>
+                        </div>
+                    </section>
+                </article>
+    
+            </div>
         </template>
     </main>
     <footer class="d-flex justify-content-between mt-2" id="piefinal">
